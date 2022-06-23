@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pypenador"
+readme = "README.rst"
+version = "v0.1.0"
+authors = [{ name="Armand Villaverde", email="aavillaverde11@gmail.com" }]
+description = "A simple command line file recovery and forensics tool"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: POSIX"
+]
+
+[project.urls]
+"Source" = "https://github.com/xochozomatli/pypenador"
+"Tracker" = "https://github.com/xochozomatli/pypenador/issues"
+
+[project.optional-dependencies]
+dev = ["autopep8", "flake8", "pylint", "pytest"]
+
+[tool.flake8]
+ignore = ["D203"]
+exclude = [".git", "__pycache__"]
+max-complexity = 10
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

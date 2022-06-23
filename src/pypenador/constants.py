@@ -1,0 +1,13 @@
+PDF_HEADER_PREFIX = b"\x25\x50\x44\x46"
+END_OF_FILE = b"\x25\x25\x45\x4f\x46"
+JPG_HEADER_PREFIX = b"\xff\xd8"
+JPG_EOF = b"\xff\xd9"
+
+FTYPES = ['jpg', 'pdf']
+FILE_BOUNDS = {
+    "pdf": (PDF_HEADER_PREFIX, END_OF_FILE),
+    "jpg": (JPG_HEADER_PREFIX, JPG_EOF)
+}
+
+DEFAULT_FILE_TYPE = "jpg"
+DEFAULT_BATCH_SIZE = 2**28
